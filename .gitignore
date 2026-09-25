@@ -1,0 +1,9 @@
+.databricks/
+.venv/
+__pycache__/
+*.pyc
+.env
+*.pem
+*.key
+docs/*.png
+docs/*.log

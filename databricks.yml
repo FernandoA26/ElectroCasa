@@ -1,0 +1,25 @@
+bundle:
+  name: electrocasa_lakehouse
+
+include:
+  - resources/*.yml
+
+variables:
+  catalog:
+    description: Catálogo de Unity Catalog aprovisionado previamente
+  alert_email:
+    description: Dirección real de alertas del propietario del job
+  foreign_catalog:
+    description: Catálogo federado de Azure SQL creado durante el aprovisionamiento
+    default: electrocasa_sql
+
+targets:
+  dev:
+    default: true
+    mode: development
+    variables:
+      catalog: electrocasa_dev
+  prod:
+    mode: production
+    variables:
+      catalog: electrocasa

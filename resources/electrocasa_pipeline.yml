@@ -1,0 +1,17 @@
+resources:
+  pipelines:
+    electrocasa_pipeline:
+      name: electrocasa_${bundle.target}_pipeline
+      catalog: ${var.catalog}
+      schema: gold
+      serverless: true
+      development: false
+      continuous: false
+      channel: CURRENT
+      configuration:
+        project.catalog: ${var.catalog}
+        project.landing: /Volumes/${var.catalog}/bronze/landing
+        project.state: /Volumes/${var.catalog}/bronze/pipeline_state
+      libraries:
+        - file:
+            path: ../src/electrocasa/transformations/pipeline.py

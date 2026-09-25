@@ -1,0 +1,111 @@
+{
+  "ventas": {
+    "archivo": "ventas_sucursales.csv",
+    "filas": 15225,
+    "columnas": [
+      "venta_id",
+      "sucursal_id",
+      "producto_id",
+      "cantidad",
+      "monto_total",
+      "metodo_pago",
+      "fecha_venta",
+      "canal"
+    ],
+    "ids_distintos": 15000,
+    "filas_con_id_repetido": 225,
+    "nulos_o_vacios": {
+      "sucursal_id": 251,
+      "monto_total": 319
+    },
+    "monto_no_positivo": 557
+  },
+  "productos": {
+    "archivo": "catalogo_productos.json",
+    "filas": 3030,
+    "columnas": [
+      "producto_id",
+      "nombre_producto",
+      "categoria",
+      "marca",
+      "precio_lista"
+    ],
+    "ids_distintos": 3000,
+    "filas_con_id_repetido": 30,
+    "nulos_o_vacios": {
+      "marca": 59
+    },
+    "precio_no_positivo_o_no_numerico": 81
+  },
+  "empleados": {
+    "archivo": "empleados_rrhh.csv",
+    "filas": 4078,
+    "columnas": [
+      "id_empleado",
+      "nombre",
+      "dni",
+      "email",
+      "salario",
+      "sucursal_id",
+      "cargo",
+      "tipo_evento",
+      "fecha_evento"
+    ],
+    "ids_distintos": 2000,
+    "filas_con_id_repetido": 2078,
+    "nulos_o_vacios": {
+      "dni": 63,
+      "email": 37,
+      "fecha_evento": 46
+    }
+  },
+  "resenas": {
+    "archivo": "resenas_clientes.json",
+    "filas": 8080,
+    "columnas": [
+      "resena_id",
+      "producto_id",
+      "cliente_id",
+      "calificacion",
+      "comentario",
+      "tags",
+      "respuestas",
+      "fecha_resena"
+    ],
+    "ids_distintos": 8000,
+    "filas_con_id_repetido": 80,
+    "nulos_o_vacios": {
+      "calificacion": 42,
+      "comentario": 540,
+      "tags": 132,
+      "fecha_resena": 154
+    },
+    "calificacion_fuera_de_1_a_5": 150
+  },
+  "devoluciones": {
+    "archivo": "devoluciones.csv",
+    "filas": 4040,
+    "columnas": [
+      "devolucion_id",
+      "pedido_id",
+      "sucursal_id",
+      "producto_id",
+      "motivo",
+      "monto_reembolso",
+      "fecha_devolucion"
+    ],
+    "ids_distintos": 4000,
+    "filas_con_id_repetido": 40,
+    "nulos_o_vacios": {
+      "pedido_id": 39,
+      "motivo": 122
+    },
+    "reembolso_negativo": 71
+  },
+  "tracking_script": {
+    "archivo": "tracking_envios_azure_sql.sql",
+    "tabla": "dbo.TrackingEnvios",
+    "filas_insert_sinteticas": 5050,
+    "nota": "Conteo de sentencias de inserción del script de referencia"
+  }
+}

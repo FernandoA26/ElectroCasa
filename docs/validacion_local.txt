@@ -1,0 +1,3 @@
+YAML: sintaxis local legible por PyYAML
+Estructura: 10 archivos requeridos presentes
+Python y notebooks: sintaxis válida
