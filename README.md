@@ -81,9 +81,3 @@ El perfil de las fuentes se obtiene con `python tools/profile_sources.py`. La es
 
 El pipeline y los notebooks de Jobs utilizan cómputo serverless, con ejecuciones discretas diarias y sin cluster permanente. El catálogo pequeño se reemplaza en batch; Auto Loader incremental minimiza lecturas repetidas de archivos; COPY INTO evita reprocesar archivos de RR. HH.; tracking se consulta vía Lakehouse Federation solo una vez por job y limita columnas. Para este conjunto de muestras, la ejecución diaria puede ser más frecuente que lo necesario: ajustar a la llegada real y supervisar duración y costo desde Jobs y el event log. No hacer full refresh sin necesidad: reinterpreta los datos de entrada y puede incrementar el gasto.
 
-## Fuentes de referencia técnica
-
-- [Publicación en distintos schemas de un pipeline](https://docs.databricks.com/aws/en/ldp/target-schema)
-- [Pipeline Python con streaming tables y materialized views](https://learn.microsoft.com/en-us/azure/databricks/ldp/developer/python-dev)
-- [Bundles y recursos de pipeline/job](https://docs.databricks.com/aws/en/dev-tools/bundles/examples)
-- [Grupos de cuenta para Unity Catalog](https://learn.microsoft.com/en-us/azure/databricks/data-governance/unity-catalog/requirements)
